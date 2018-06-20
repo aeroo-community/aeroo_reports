@@ -19,7 +19,7 @@ class IrActionsReportLine(models.Model):
     template_source = fields.Selection([
         ('database', 'Database'),
         ('file', 'File'),
-    ], string='Template source', default='database', select=True)
+    ], string='Template source', default='database', index=True)
 
     template_data = fields.Binary('Template')
     template_filename = fields.Binary('File Name')

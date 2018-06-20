@@ -35,7 +35,7 @@ class AerooAddPrintButton(models.TransientModel):
         ('add', 'Add'),
         ('exist', 'Exist'),
         ('done', 'Done'),
-    ], 'State', select=True, readonly=True, default=_default_state)
+    ], 'State', index=True, readonly=True, default=_default_state)
 
     @api.multi
     def do_action(self):

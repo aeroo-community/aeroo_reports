@@ -19,7 +19,7 @@ class AerooRemovePrintButton(models.TransientModel):
         ('remove', 'Remove'),
         ('no_exist', 'Not Exist'),
         ('done', 'Done'),
-    ], 'State', select=True, readonly=True)
+    ], 'State', index=True, readonly=True)
 
     @api.model
     def default_get(self, fields_list):

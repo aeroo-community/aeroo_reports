@@ -34,7 +34,7 @@ class ReportXml(models.Model):
         ('database', 'Database'),
         ('file', 'File'),
         ('lang', 'Different Template per Language'),
-    ], string='Template source', default='database', select=True)
+    ], string='Template source', default='database', index=True)
     parser_loc = fields.Char(
         'Parser location',
         help="Path to the parser location. Beginning of the path must be start \
